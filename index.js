@@ -2,8 +2,8 @@ let n = prompt('Введіть стартове число',10);
 
 n = parseInt(n, 10);
 
-if (isNaN(n)) {
-   alert("Ви ввели невірне число!");
+while (isNaN(n)) {
+   n=+prompt("Ви ввели невірне число!");
 } 
 
 console.log(`Стартове число: ${n}`);
@@ -13,8 +13,8 @@ let m = prompt(' Введіть кінцеве число',100);
 
 m = parseInt(m, 10);
 
-if (isNaN(m)) {
-   alert("Ви ввели невірне число!");
+while (isNaN(m)) {
+  m = +prompt("Ви ввели невірне число!");
 };
 
 console.log(`Кінцеве число: ${m}`);
