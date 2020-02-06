@@ -3,7 +3,7 @@ let n = prompt('Введіть стартове число',10);
 n = parseInt(n, 10);
 
 while (isNaN(n)) {
-   n=+prompt("Ви ввели невірне число!");
+   n=parseInt(prompt("Ви ввели невірне число!"));
 } 
 
 console.log(`Стартове число: ${n}`);
@@ -14,18 +14,18 @@ let m = prompt(' Введіть кінцеве число',100);
 m = parseInt(m, 10);
 
 while (isNaN(m)) {
-  m = +prompt("Ви ввели невірне число!");
+  m = parseInt(prompt("Ви ввели невірне число!"));
 };
 
 console.log(`Кінцеве число: ${m}`);
 
 
 if (n > m) {
-  alert('Error! The starting number must be lower than the ending number!');
+  prompt('Error! The starting number must be lower than the ending number!');
 }
 
 
-let skipEvenNumbers = confirm('Пропустити парні числа?')
+const skipEvenNumbers = confirm('Пропустити парні числа?')
 
 console.log(`Пропустити парні числа? : ${skipEvenNumbers}`);
 
@@ -43,9 +43,9 @@ for (let i = n; i<= m; i++) {
   }
 
 
-if (skipEvenNumbers === false) {
+if (!skipEvenNumbers) {
   console.log(`Сума непарних чисел між ${n} та ${m} : ${sumOfNumbers}`);
-} else if (skipEvenNumbers === true) {
+} else if (skipEvenNumbers) {
   console.log(`Сума непарних чисел між ${n} та ${m} : ${sumOfNumbers}`);
 }
 
