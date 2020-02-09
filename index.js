@@ -33,9 +33,9 @@ console.log(`Пропустити парні числа? : ${skipEvenNumbers}`);
 let sumOfNumbers = 0;
 
 for (let i = n; i<= m; i++) {
-    if (skipEvenNumbers === false) {
+    if (!skipEvenNumbers) {
       sumOfNumbers+=i;
-    } else if (skipEvenNumbers === true) {
+    } else if (skipEvenNumbers) {
         if (i%2 !== 0) {
         sumOfNumbers+=i;
       }
